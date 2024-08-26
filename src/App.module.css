@@ -1,5 +1,9 @@
 .container {
   width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /*Tasks*/
@@ -51,4 +55,25 @@
 .message {
   text-align: center;
   margin-top: 4rem;
+}
+
+.toastAlert {
+  background-color: var(--gray-200);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--gray-400);
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--purple-300);
+}
+.footer a:hover {
+  color: var(--blue-300);
 }

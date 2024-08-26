@@ -3,11 +3,12 @@ import toDoLogo from "../assets/todo-logo.svg"
 import { useState } from "react"
 
 export function Header({ onCreateTask }) {
-  const [newTask, setNewTask] = useState([])
+  const [newTask, setNewTask] = useState("")
 
   function handleCreateTask(event) {
     event.preventDefault()
     onCreateTask(newTask)
+    setNewTask("")
   }
 
   return (
@@ -18,6 +19,7 @@ export function Header({ onCreateTask }) {
           type="text"
           placeholder="Adicione uma nova tarefa"
           onChange={(e) => setNewTask(e.target.value)}
+          value={newTask}
         />
         <button type="submit" onClick={handleCreateTask}>
           Criar

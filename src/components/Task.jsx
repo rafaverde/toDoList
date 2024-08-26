@@ -18,7 +18,12 @@ export function Task({ id, isCompleted, title, onDeleteTask, onCompleteTask }) {
           onClick={handleCompleteTask}
         />
       ) : (
-        <CheckCircle size={28} weight="fill" className={styles.checked} />
+        <CheckCircle
+          size={28}
+          weight="fill"
+          className={styles.checked}
+          onClick={handleCompleteTask}
+        />
       )}
       <p className={isCompleted ? styles.textChecked : null}>{title}</p>
       <button onClick={handleTaskDelete}>
